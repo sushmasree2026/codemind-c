@@ -6,15 +6,13 @@ int main()
     for(i=1;i<n;i++)
     {
         if(n%i==0)
-        {
-            s=s+i;
-        }
-    }
-    if(s==n)
+          s=s+i;
+    } 
+    if (i==s)
     {
         printf("True");
-    }
-    else
+    } 
+    else 
     {
         printf("False");
     }
