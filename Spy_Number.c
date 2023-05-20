@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,a=0,m=1;
-    scanf("%d",&n); 
-    for(i=1;n>0;i++)
+    int a,i,s=0,m=1,b;
+    scanf("%d",&a);
+    for(i=0;a>0;i++)
     {
-        i=n%10;
-        n=n/10;
-        a=a+i;
-        m=m*i;
+        i=a%10;
+        a=a/10;
+        s+=i;
+        m*=i;
     }
-    if(a==m)
+    if(m==s)
     {
         printf("Spy Number");
     }
@@ -18,4 +18,5 @@ int main()
     {
         printf("Not Spy Number");
     }
+    return 0;
 }
