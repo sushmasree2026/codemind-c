@@ -1,33 +1,52 @@
 #include<stdio.h>
 int main()
 {
-    int n,rev,zero=1;
-    long long number,last=0,r=0,first=0;
-    scanf("%lld%d",&number,&n);
-    rev=n;
-    while(rev)
+    int r,n,temp,no,rev=0,sum1=0,rev1=0,sum2=0,count=0;
+    scanf("%d%d",&n,&no);
+    temp=n; 
+    count=no; 
+    while(temp>0) 
     {
-        zero=zero*10;
-        rev--;
+        r=temp%10;
+        rev=(rev*10)+r;
+        temp/=10;
+    } 
+    while(n>0)
+    {
+        r=n%10;
+        if(count==0)
+        { 
+            break; 
+        }
+        sum1=(sum1*10)+r;
+        n/=10;
+        count--;
     }
-    last=number%zero;
-    while(number)
+    count=no;
+    while(rev>0)
     {
-        r=(r*10)+(number%10);
-        number/=10;
+        r=rev%10; 
+        if(count==0)
+        {
+            break;
+        }
+        sum2=(sum2*10)+r; 
+        rev/=10;
+        count--;
     }
-    while(n)
+    while(sum1>0)
     {
-        first=(first*10)+(r%10);
-        r/=10;
-        n--;
+        r=sum1%10;
+        rev1=(rev1*10)+r;
+        sum1/=10;
     }
-    if(first<last)
+    if(rev1>sum2)
     {
-        printf("%lld",last-first);
+        printf("%d",rev1-sum2);
     }
     else
     {
-       printf("%lld",first-last);
+        printf("%d",sum2-rev1);
     }
+    return 0;
 }
