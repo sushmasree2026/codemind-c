@@ -25,8 +25,8 @@ int main()
     {
         printf("Unique Number");
     }
-    else 
+    else
     {
-        printf("Not Unique Number"); 
+        printf("Not Unique Number");
     }
 }
