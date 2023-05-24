@@ -10,21 +10,21 @@ int main()
         c=0;
         while(n>0)
         {
-          r=n%10;
-          n=n/10;
-          co++;
-          if(r==0)
-          {
-              break;
-          }
-          if(x%r==0)
-          {
-              c++;
-          }
+            r=n%10;
+            n/=10;
+            co++;
+            if(r==0) 
+            {
+                break;
+            }
+            if(x%r==0)
+            {
+                c++; 
+            }
         }
-        if(c==co)
+        if(c==co) 
         {
             printf("%d ",x);
-        }
+        } 
     }
 }
